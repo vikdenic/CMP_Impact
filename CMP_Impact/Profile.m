@@ -10,9 +10,21 @@
 
 @implementation Profile
 
+@dynamic user;
+@dynamic fullName;
+
 +(NSString *)parseClassName
 {
     return @"Profile";
+}
+
+-(instancetype)initWithUser: (User *)user
+{
+    self = [super init];
+    self.user = user;
+    self.fullName = @"Your Name";
+
+    return self;
 }
 
 @end

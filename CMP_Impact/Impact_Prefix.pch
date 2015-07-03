@@ -17,6 +17,7 @@
 #import <ParseUI/ParseUI.h>
 
 //Model
+#import "User.h"
 #import "Profile.h"
 
 #endif

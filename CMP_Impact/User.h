@@ -14,4 +14,7 @@
 
 +(User *)currentUser;
 
+-(instancetype)initWithUsername:(NSString *)username withPassword: (NSString *)password;
++(void)createUserWithUserName:(NSString *)username withPassword:(NSString *)password completion:(void (^)(BOOL, NSError *))completionHandler;
+
 @end

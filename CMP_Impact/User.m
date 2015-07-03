@@ -20,4 +20,21 @@
     return (User *)[PFUser currentUser];
 }
 
+-(instancetype)initWithUsername:(NSString *)username withPassword: (NSString *)password
+{
+    self = [super init];
+    self.username = username;
+    self.password = password;
+    return self;
+}
+
++(void)createUserWithUserName:(NSString *)username withPassword:(NSString *)password completion:(void (^)(BOOL, NSError *))completionHandler
+{
+    User *user = [[User alloc] initWithUsername:username withPassword:password];
+
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        completionHandler(succeeded, error);
+    }];
+}
+
 @end

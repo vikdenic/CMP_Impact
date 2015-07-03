@@ -12,4 +12,9 @@
 
 +(NSString *)parseClassName;
 
+-(instancetype)initWithUser: (User *)user;
+
+@property User *user;
+@property NSString *fullName;
+
 @end

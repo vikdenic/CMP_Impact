@@ -92,10 +92,10 @@
 		93D0373A1B46098100927D17 /* CMP_Impact */ = {
 			isa = PBXGroup;
 			children = (
-				93D037621B460C7D00927D17 /* Model */,
 				93D0373F1B46098100927D17 /* AppDelegate.h */,
 				93D037401B46098100927D17 /* AppDelegate.m */,
 				93D037451B46098100927D17 /* Main.storyboard */,
+				93D037621B460C7D00927D17 /* Model */,
 				93D037481B46098100927D17 /* Images.xcassets */,
 				93D0374A1B46098100927D17 /* LaunchScreen.xib */,
 				93D0373B1B46098100927D17 /* Supporting Files */,
