@@ -22,8 +22,8 @@
 
     [Profile registerSubclass];
 
-    [Parse setApplicationId:@"Y5tuRfbwpGIbfTrnDOSpaOSpQQ9HXuvPynaPFZ36"
-                  clientKey:@"GdCcTlS08ICJ52fnLMzb6KsLKEBBYA4CiqoSafQz"];
+    [Parse setApplicationId:@"WKvDyqa7Hs23bkdbhPqAM4eadylYMxRlKTboJ56G"
+                  clientKey:@"JhKakKAmnmp5Zt1dcrlXYtn4phHe9yf6Z3GmxuTp"];
 
     return YES;
 }

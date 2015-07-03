@@ -79,7 +79,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="ys3-j8-2QB" id="q3A-DS-2L6"/>
                         <outlet property="passwordTextfield" destination="a27-cs-lPg" id="V1T-A1-vmK"/>
+                        <outlet property="segmentedControl" destination="ACz-Ge-uRN" id="qCB-gV-8S7"/>
                         <outlet property="usernameTextfield" destination="r7D-ac-RPY" id="kZJ-Ij-lSZ"/>
                     </connections>
                 </viewController>
