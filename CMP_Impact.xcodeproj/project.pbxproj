@@ -14,6 +14,8 @@
 		93D037491B46098100927D17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D037481B46098100927D17 /* Images.xcassets */; };
 		93D0374C1B46098100927D17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93D0374A1B46098100927D17 /* LaunchScreen.xib */; };
 		93D037581B46098100927D17 /* CMP_ImpactTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037571B46098100927D17 /* CMP_ImpactTests.m */; };
+		93D037651B460CAA00927D17 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037641B460CAA00927D17 /* User.m */; };
+		93D037681B460D6400927D17 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037671B460D6400927D17 /* Profile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		93D037561B46098100927D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D037571B46098100927D17 /* CMP_ImpactTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMP_ImpactTests.m; sourceTree = "<group>"; };
 		93D037611B460BA300927D17 /* Impact_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Impact_Prefix.pch; sourceTree = "<group>"; };
+		93D037631B460CAA00927D17 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		93D037641B460CAA00927D17 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		93D037661B460D6400927D17 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		93D037671B460D6400927D17 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		B4FA01B620CC41FA9B5A37DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C38A9BB04EA72547A00F21BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +92,7 @@
 		93D0373A1B46098100927D17 /* CMP_Impact */ = {
 			isa = PBXGroup;
 			children = (
+				93D037621B460C7D00927D17 /* Model */,
 				93D0373F1B46098100927D17 /* AppDelegate.h */,
 				93D037401B46098100927D17 /* AppDelegate.m */,
 				93D037451B46098100927D17 /* Main.storyboard */,
@@ -121,6 +128,17 @@
 				93D037561B46098100927D17 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93D037621B460C7D00927D17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93D037631B460CAA00927D17 /* User.h */,
+				93D037641B460CAA00927D17 /* User.m */,
+				93D037661B460D6400927D17 /* Profile.h */,
+				93D037671B460D6400927D17 /* Profile.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B4938DE9A2116663B134C0A1 /* Frameworks */ = {
@@ -276,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				93D037411B46098100927D17 /* AppDelegate.m in Sources */,
+				93D037681B460D6400927D17 /* Profile.m in Sources */,
 				93D0373E1B46098100927D17 /* main.m in Sources */,
+				93D037651B460CAA00927D17 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
