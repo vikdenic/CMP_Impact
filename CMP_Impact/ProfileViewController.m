@@ -10,13 +10,18 @@
 
 @interface ProfileViewController ()
 
+@property Profile *profile;
+
 @end
 
 @implementation ProfileViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.profile = [UniversalProfile sharedInstance].profile;
+    self.title = self.profile.fullName;
 }
 
 @end

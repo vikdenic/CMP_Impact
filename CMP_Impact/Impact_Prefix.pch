@@ -19,5 +19,6 @@
 //Model
 #import "User.h"
 #import "Profile.h"
+#import "UniversalProfile.h"
 
 #endif
