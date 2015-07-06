@@ -46,8 +46,6 @@
             {
                 [self dismissViewControllerAnimated:YES completion:^{
 
-                    //TODO: create profile
-
                 }];
             }
             else
@@ -62,10 +60,10 @@
          {
              if (error == nil)
              {
-                 [self dismissViewControllerAnimated:YES completion:^{
+                 Profile *newProfile = [[Profile alloc] initWithUser:[User currentUser]];
 
-                     //TODO: create profile
-                     
+                 [newProfile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                     [self dismissViewControllerAnimated:YES completion:nil];
                  }];
              }
              else
