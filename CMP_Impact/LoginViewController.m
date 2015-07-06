@@ -44,7 +44,11 @@
         {
             if (error == nil)
             {
-                //create profile
+                [self dismissViewControllerAnimated:YES completion:^{
+
+                    //TODO: create profile
+
+                }];
             }
             else
             {
@@ -58,7 +62,11 @@
          {
              if (error == nil)
              {
-                 //create profile
+                 [self dismissViewControllerAnimated:YES completion:^{
+
+                     //TODO: create profile
+                     
+                 }];
              }
              else
              {

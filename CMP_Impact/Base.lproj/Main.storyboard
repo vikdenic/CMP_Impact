@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="buV-Ia-gCj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -87,6 +88,116 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1605" y="521"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="YpE-z2-wKO">
+            <objects>
+                <viewController id="8Rh-zv-ZcJ" customClass="FeedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CgU-cU-AKp"/>
+                        <viewControllerLayoutGuide type="bottom" id="rPA-az-SAA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LiN-D3-mc7">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uIR-vE-dat">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmCell" rowHeight="100" id="BEM-f2-nos">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BEM-f2-nos" id="bKB-oa-WqC">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Rh-zv-ZcJ" id="aM9-fK-47K"/>
+                                    <outlet property="delegate" destination="8Rh-zv-ZcJ" id="54E-0A-9ZR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rPA-az-SAA" firstAttribute="top" secondItem="uIR-vE-dat" secondAttribute="bottom" id="Acg-a1-JVn"/>
+                            <constraint firstItem="uIR-vE-dat" firstAttribute="leading" secondItem="LiN-D3-mc7" secondAttribute="leadingMargin" constant="-16" id="LMT-0c-TTK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uIR-vE-dat" secondAttribute="trailing" constant="-16" id="Y0Z-st-EdD"/>
+                            <constraint firstItem="uIR-vE-dat" firstAttribute="top" secondItem="LiN-D3-mc7" secondAttribute="topMargin" id="mY3-9l-efZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uIR-vE-dat"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="LMT-0c-TTK"/>
+                                <exclude reference="Y0Z-st-EdD"/>
+                                <exclude reference="mY3-9l-efZ"/>
+                                <exclude reference="Acg-a1-JVn"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="uIR-vE-dat"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="LMT-0c-TTK"/>
+                                <include reference="Y0Z-st-EdD"/>
+                                <include reference="mY3-9l-efZ"/>
+                                <include reference="Acg-a1-JVn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="f1S-jr-lB8"/>
+                    <connections>
+                        <outlet property="tableView" destination="uIR-vE-dat" id="XFa-4j-qcg"/>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="FeedToLoginSegue" id="hTh-vk-qIk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzR-xe-TWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605" y="1180"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="faU-W9-kW4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1TN-3J-zmv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" id="jp0-GV-Fi5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PY8-u4-CVO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Rh-zv-ZcJ" kind="relationship" relationship="rootViewController" id="fIj-Q6-XaY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iA6-MU-8wj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943.5" y="1180"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ORw-S6-pSY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="buV-Ia-gCj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JkG-CI-dbp">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1TN-3J-zmv" kind="relationship" relationship="viewControllers" id="sfS-l2-5Gc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaD-Dq-UVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="1180"/>
         </scene>
     </scenes>
 </document>
