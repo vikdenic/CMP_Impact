@@ -21,7 +21,12 @@
     [super viewDidLoad];
 
     self.profile = [UniversalProfile sharedInstance].profile;
-    self.title = self.profile.fullName;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationItem setTitle:self.profile.fullName];
 }
 
 @end

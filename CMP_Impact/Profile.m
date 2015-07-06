@@ -27,4 +27,19 @@
     return self;
 }
 
++(void)setProfileSingletonwithBlock:(void(^)(Profile *profile, NSError *error))completionHandler
+{
+    if ([User currentUser])
+    {
+        PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
+        [query includeKey:@"user"];
+        [query whereKey:@"user" equalTo:[User currentUser]];
+
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            [UniversalProfile sharedInstance].profile = (Profile *) object;
+            completionHandler(object, error);
+        }];
+    }
+}
+
 @end

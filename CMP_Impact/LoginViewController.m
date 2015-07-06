@@ -44,8 +44,8 @@
         {
             if (error == nil)
             {
-                [self dismissViewControllerAnimated:YES completion:^{
-
+                [Profile setProfileSingletonwithBlock:^(Profile *profile, NSError *error) {
+                    [self dismissViewControllerAnimated:YES completion:nil];
                 }];
             }
             else

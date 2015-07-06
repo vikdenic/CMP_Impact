@@ -173,11 +173,79 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qBE-Mz-BcR"/>
+                    <navigationItem key="navigationItem" id="qBE-Mz-BcR">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="B5Y-DO-T5t">
+                            <connections>
+                                <segue destination="FAB-JM-hRb" kind="show" id="LRs-rl-Alt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3u-yD-Rhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1633.5" y="1932"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="bMP-5A-Ka3">
+            <objects>
+                <viewController id="FAB-JM-hRb" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xPi-2b-7zZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="BbM-vj-a44"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n08-B6-52b">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OR-GV-8p2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="170" y="285" width="60" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onSignOutTapped:" destination="FAB-JM-hRb" eventType="touchUpInside" id="wRJ-ad-l6j"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WHc-Rj-WHo">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="95" y="102" width="211" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0OR-GV-8p2"/>
+                                <exclude reference="WHc-Rj-WHo"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0OR-GV-8p2"/>
+                                <include reference="WHc-Rj-WHo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="jaZ-mm-Tfq">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="HMx-QH-QK0">
+                            <connections>
+                                <action selector="onSaveButtonTapped:" destination="FAB-JM-hRb" id="2Xm-oE-X4c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="WHc-Rj-WHo" id="rci-7X-JU7"/>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="SignOutToLoginSegue" id="TKq-33-eyf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdf-eA-kET" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334" y="1932"/>
         </scene>
         <!--Feed-->
         <scene sceneID="faU-W9-kW4">
@@ -237,4 +305,7 @@
             <point key="canvasLocation" x="943.5" y="1932"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TKq-33-eyf"/>
+    </inferredMetricsTieBreakers>
 </document>

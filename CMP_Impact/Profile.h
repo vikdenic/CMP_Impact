@@ -13,6 +13,7 @@
 +(NSString *)parseClassName;
 
 -(instancetype)initWithUser: (User *)user;
++(void)setProfileSingletonwithBlock:(void(^)(Profile *profile, NSError *error))completionHandler;
 
 @property User *user;
 @property NSString *fullName;

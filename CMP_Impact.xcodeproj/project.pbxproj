@@ -21,6 +21,7 @@
 		93D037761B4A32CE00927D17 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93D037751B4A32CE00927D17 /* Keys.plist */; };
 		93D037791B4A491C00927D17 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037781B4A491C00927D17 /* ProfileViewController.m */; };
 		93D0377C1B4A49C500927D17 /* UniversalProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0377B1B4A49C500927D17 /* UniversalProfile.m */; };
+		93D0377F1B4B289900927D17 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0377E1B4B289900927D17 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		93D037781B4A491C00927D17 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		93D0377A1B4A49C500927D17 /* UniversalProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniversalProfile.h; sourceTree = "<group>"; };
 		93D0377B1B4A49C500927D17 /* UniversalProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalProfile.m; sourceTree = "<group>"; };
+		93D0377D1B4B289900927D17 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		93D0377E1B4B289900927D17 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		B4FA01B620CC41FA9B5A37DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C38A9BB04EA72547A00F21BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,6 +171,8 @@
 				93D037731B4A254C00927D17 /* FeedViewController.m */,
 				93D037771B4A491C00927D17 /* ProfileViewController.h */,
 				93D037781B4A491C00927D17 /* ProfileViewController.m */,
+				93D0377D1B4B289900927D17 /* SettingsViewController.h */,
+				93D0377E1B4B289900927D17 /* SettingsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				93D037411B46098100927D17 /* AppDelegate.m in Sources */,
 				93D037681B460D6400927D17 /* Profile.m in Sources */,
 				93D0373E1B46098100927D17 /* main.m in Sources */,
+				93D0377F1B4B289900927D17 /* SettingsViewController.m in Sources */,
 				93D037651B460CAA00927D17 /* User.m in Sources */,
 				93D037791B4A491C00927D17 /* ProfileViewController.m in Sources */,
 				93D037741B4A254C00927D17 /* FeedViewController.m in Sources */,

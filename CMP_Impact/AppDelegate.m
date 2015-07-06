@@ -24,7 +24,9 @@
 
     [self parseSetup];
 
-    [self retrieveProfile];
+    [Profile setProfileSingletonwithBlock:^(Profile *profile, NSError *error) {
+        //profile set
+    }];
 
     return YES;
 }
@@ -37,20 +39,6 @@
 
     [Parse setApplicationId:applicationId
                   clientKey:clientKey];
-}
-
--(void)retrieveProfile
-{
-    if ([User currentUser])
-    {
-        PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
-        [query includeKey:@"user"];
-        [query whereKey:@"user" equalTo:[User currentUser]];
-
-        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-            [UniversalProfile sharedInstance].profile = (Profile *) object;
-        }];
-    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
