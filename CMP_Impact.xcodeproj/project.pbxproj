@@ -18,6 +18,7 @@
 		93D037681B460D6400927D17 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037671B460D6400927D17 /* Profile.m */; };
 		93D037711B46194700927D17 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037701B46194700927D17 /* LoginViewController.m */; };
 		93D037741B4A254C00927D17 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037731B4A254C00927D17 /* FeedViewController.m */; };
+		93D037761B4A32CE00927D17 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93D037751B4A32CE00927D17 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		93D037701B46194700927D17 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		93D037721B4A254C00927D17 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		93D037731B4A254C00927D17 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		93D037751B4A32CE00927D17 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		B4FA01B620CC41FA9B5A37DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C38A9BB04EA72547A00F21BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				93D0373C1B46098100927D17 /* Info.plist */,
+				93D037751B4A32CE00927D17 /* Keys.plist */,
 				93D0373D1B46098100927D17 /* main.m */,
 				93D037611B460BA300927D17 /* Impact_Prefix.pch */,
 			);
@@ -258,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D037761B4A32CE00927D17 /* Keys.plist in Resources */,
 				93D037471B46098100927D17 /* Main.storyboard in Resources */,
 				93D0374C1B46098100927D17 /* LaunchScreen.xib in Resources */,
 				93D037491B46098100927D17 /* Images.xcassets in Resources */,

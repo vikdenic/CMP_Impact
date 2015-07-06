@@ -22,10 +22,19 @@
 
     [Profile registerSubclass];
 
-    [Parse setApplicationId:@"WKvDyqa7Hs23bkdbhPqAM4eadylYMxRlKTboJ56G"
-                  clientKey:@"JhKakKAmnmp5Zt1dcrlXYtn4phHe9yf6Z3GmxuTp"];
+    [self parseSetup];
 
     return YES;
+}
+
+-(void)parseSetup
+{
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Keys" ofType:@"plist"]];
+    NSString *applicationId = [dictionary objectForKey:@"ParseAppID"];
+    NSString *clientKey = [dictionary objectForKey:@"ParseClientKey"];
+
+    [Parse setApplicationId:applicationId
+                  clientKey:clientKey];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
