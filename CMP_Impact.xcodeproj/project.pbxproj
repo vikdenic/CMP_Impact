@@ -22,6 +22,8 @@
 		93D037791B4A491C00927D17 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037781B4A491C00927D17 /* ProfileViewController.m */; };
 		93D0377C1B4A49C500927D17 /* UniversalProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0377B1B4A49C500927D17 /* UniversalProfile.m */; };
 		93D0377F1B4B289900927D17 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D0377E1B4B289900927D17 /* SettingsViewController.m */; };
+		93D037831B4B2DBB00927D17 /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037821B4B2DBB00927D17 /* ProfileTableViewCell.m */; };
+		93D037861B4B2E2700927D17 /* StarredFilmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D037851B4B2E2700927D17 /* StarredFilmTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		93D0377B1B4A49C500927D17 /* UniversalProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniversalProfile.m; sourceTree = "<group>"; };
 		93D0377D1B4B289900927D17 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		93D0377E1B4B289900927D17 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		93D037811B4B2DBB00927D17 /* ProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
+		93D037821B4B2DBB00927D17 /* ProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewCell.m; sourceTree = "<group>"; };
+		93D037841B4B2E2700927D17 /* StarredFilmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarredFilmTableViewCell.h; sourceTree = "<group>"; };
+		93D037851B4B2E2700927D17 /* StarredFilmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarredFilmTableViewCell.m; sourceTree = "<group>"; };
 		B4FA01B620CC41FA9B5A37DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C38A9BB04EA72547A00F21BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,6 +119,7 @@
 				93D037401B46098100927D17 /* AppDelegate.m */,
 				93D037451B46098100927D17 /* Main.storyboard */,
 				93D0376E1B46192F00927D17 /* Controllers */,
+				93D037801B4B2DA200927D17 /* Cells */,
 				93D037621B460C7D00927D17 /* Model */,
 				93D037481B46098100927D17 /* Images.xcassets */,
 				93D0374A1B46098100927D17 /* LaunchScreen.xib */,
@@ -175,6 +182,17 @@
 				93D0377E1B4B289900927D17 /* SettingsViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		93D037801B4B2DA200927D17 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				93D037811B4B2DBB00927D17 /* ProfileTableViewCell.h */,
+				93D037821B4B2DBB00927D17 /* ProfileTableViewCell.m */,
+				93D037841B4B2E2700927D17 /* StarredFilmTableViewCell.h */,
+				93D037851B4B2E2700927D17 /* StarredFilmTableViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		B4938DE9A2116663B134C0A1 /* Frameworks */ = {
@@ -333,12 +351,14 @@
 				93D037411B46098100927D17 /* AppDelegate.m in Sources */,
 				93D037681B460D6400927D17 /* Profile.m in Sources */,
 				93D0373E1B46098100927D17 /* main.m in Sources */,
+				93D037831B4B2DBB00927D17 /* ProfileTableViewCell.m in Sources */,
 				93D0377F1B4B289900927D17 /* SettingsViewController.m in Sources */,
 				93D037651B460CAA00927D17 /* User.m in Sources */,
 				93D037791B4A491C00927D17 /* ProfileViewController.m in Sources */,
 				93D037741B4A254C00927D17 /* FeedViewController.m in Sources */,
 				93D037711B46194700927D17 /* LoginViewController.m in Sources */,
 				93D0377C1B4A49C500927D17 /* UniversalProfile.m in Sources */,
+				93D037861B4B2E2700927D17 /* StarredFilmTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

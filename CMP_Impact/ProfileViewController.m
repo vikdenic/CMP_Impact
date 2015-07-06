@@ -7,9 +7,12 @@
 //
 
 #import "ProfileViewController.h"
+#import "ProfileTableViewCell.h"
+#import "StarredFilmTableViewCell.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property Profile *profile;
 
 @end
@@ -27,6 +30,29 @@
 {
     [super viewWillAppear:animated];
     [self.navigationItem setTitle:self.profile.fullName];
+}
+
+#pragma mark - TableView
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0)
+    {
+        ProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileCell"];
+        cell.profileImageView.file = self.profile.imageFile;
+        [cell.profileImageView loadInBackground];
+        return cell;
+    }
+    else
+    {
+        StarredFilmTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FilmCell"];
+        return cell;
+    }
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
 }
 
 @end

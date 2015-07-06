@@ -17,5 +17,6 @@
 
 @property User *user;
 @property NSString *fullName;
+@property PFFile *imageFile;
 
 @end

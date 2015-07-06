@@ -12,6 +12,7 @@
 
 @dynamic user;
 @dynamic fullName;
+@dynamic imageFile;
 
 +(NSString *)parseClassName
 {
@@ -37,7 +38,7 @@
 
         [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
             [UniversalProfile sharedInstance].profile = (Profile *) object;
-            completionHandler(object, error);
+            completionHandler((Profile *) object, error);
         }];
     }
 }

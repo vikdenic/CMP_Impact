@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property Profile *profile;
+@property (strong, nonatomic) IBOutlet PFImageView *profileImageView;
 
 @end
 
